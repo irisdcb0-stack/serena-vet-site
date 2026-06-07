@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin — Serena Vet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Serena Vet</strong></span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Panel administrativo — Citas</h1>
+        <p>Esta página lista las solicitudes y permite actualizar el estado. Protege con una contraseña si es público.</p>
+
+        <div id="admin-auth">
+          <label>Contraseña de administrador: <input id="admin-pass" type="password"></label>
+          <button id="admin-login">Entrar</button>
+        </div>
+
+        <div id="admin-root" style="display:none">
+          <div id="admin-list">Cargando...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

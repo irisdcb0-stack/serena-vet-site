@@ -1,0 +1,7 @@
+node_modules/
+dist/
+/.cache
+*.env
+supabase-config.js
+emailjs-config.js
+*.log

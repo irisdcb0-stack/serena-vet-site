@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#2d6a44",
+                        "background": "#f9f9ff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c0c9bf",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#b0f1c2",
+                        "surface-container-high": "#dee8ff",
+                        "outline": "#707971",
+                        "on-secondary-fixed": "#001f27",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e7eeff",
+                        "on-tertiary-container": "#525557",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary": "#5c5f61",
+                        "on-primary-fixed-variant": "#10512e",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f0f3ff",
+                        "on-surface-variant": "#404941",
+                        "surface-container-highest": "#d8e3fa",
+                        "on-surface": "#111c2c",
+                        "secondary-fixed": "#baeafa",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "secondary-fixed-dim": "#9ecede",
+                        "on-secondary-fixed-variant": "#1a4d5a",
+                        "on-primary-fixed": "#00210e",
+                        "surface": "#f9f9ff",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "tertiary-container": "#c7cacc",
+                        "secondary": "#356572",
+                        "tertiary-fixed": "#e0e3e5",
+                        "inverse-primary": "#95d5a7",
+                        "on-primary-container": "#22603b",
+                        "primary-container": "#98d8aa",
+                        "on-secondary-container": "#3a6977",
+                        "surface-variant": "#d8e3fa",
+                        "on-background": "#111c2c",
+                        "surface-dim": "#cfdaf1",
+                        "secondary-container": "#b7e7f7",
+                        "inverse-surface": "#263142",
+                        "primary-fixed-dim": "#95d5a7",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#2d6a44",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xl": "40px",
+                        "lg": "24px",
+                        "container-margin": "20px",
+                        "sm": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h1": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "button": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-elevation {
+            box-shadow: 0 10px 40px -10px rgba(53, 101, 114, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center px-12 py-5 max-w-full mx-auto font-manrope antialiased">
+<div class="text-2xl font-bold tracking-tight text-emerald-600 dark:text-emerald-400">PetCare Pro</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors" href="#inicio">Inicio</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors" href="#servicios">Servicios</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors" href="#instalaciones">Instalaciones</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors" href="#nosotros">Nosotros</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors" href="#contacto">Contacto</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-button hover:bg-opacity-90 transition-all shadow-md">Agendar cita</button>
+</div>
+</header>
+<main class="pt-32 pb-20 px-container-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Information & Benefits -->
+<div class="lg:col-span-5 space-y-10">
+<section>
+<h1 class="font-h1 text-h1 text-on-surface mb-4">Confía la salud de tu mascota en manos expertas</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Nuestro equipo médico está comprometido con brindar excelencia y calidez en cada consulta. Tu tranquilidad es nuestra prioridad.
+                    </p>
+</section>
+<!-- Benefits Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-primary-fixed/30 p-6 rounded-xl border border-primary-container/20">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="medical_services">medical_services</span>
+<h3 class="font-h3 text-h3 text-on-primary-fixed-variant mb-2">Atención 24/7</h3>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant/80">Urgencias médicas en cualquier momento del día.</p>
+</div>
+<div class="bg-secondary-container/30 p-6 rounded-xl border border-secondary-container/20">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="pets">pets</span>
+<h3 class="font-h3 text-h3 text-on-secondary-fixed-variant mb-2">Especialistas</h3>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant/80">Médicos certificados en diversas áreas veterinarias.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-high/40 p-6 rounded-xl border border-outline-variant/30 flex items-center space-x-6">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm">
+<img alt="Veterinaria" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly female veterinarian in a white coat smiling in a clean modern clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjPBMnwN4kcEQuBBeKw8ta0VoeRImHqloWcD0sV7WSGV9vu4Rqy0J0d_CoAk84uawfjArMOVx4J_9SfqgzbxLNixE3gjoRd474eQQWrbbBAf9wW29h8x431uTMCz0_6sgXtITxceHSfSGXNxWY_JSUEAvtbjFTra4TBSSRQFnQTXFA5wLfKU28lTQrrZyVfzqL_a20AwRGs-mAR1q7BjHNKmf1iIzf292otUz3rC3hFfzz9RqxsyeQsx3cWm-P0_bDtCCIrcHqPJFC"/>
+</div>
+<div>
+<p class="font-body-md text-on-surface italic">"Tratamos a cada paciente como si fuera parte de nuestra propia familia."</p>
+<p class="font-label-caps text-label-caps text-primary mt-1">— Dra. Elena Méndez, Directora Médica</p>
+</div>
+</div>
+</div>
+<!-- Contact Info -->
+<div class="space-y-4 pt-4">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-outline">Llámanos</p>
+<p class="font-body-md text-on-surface font-semibold">+34 900 123 456</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-outline">Visítanos</p>
+<p class="font-body-md text-on-surface font-semibold">Calle de la Salud Animal, 42, Madrid</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Appointment Form -->
+<div class="lg:col-span-7 bg-white rounded-3xl p-8 md:p-12 soft-elevation border border-slate-100">
+<header class="mb-8">
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Solicitar una Cita</h2>
+<p class="font-body-md text-on-surface-variant">Completa el formulario y nos pondremos en contacto contigo para confirmar.</p>
+</header>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Name -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Nombre Completo</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md" placeholder="Ej: Juan Pérez" type="text"/>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Correo Electrónico</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md" placeholder="juan@ejemplo.com" type="email"/>
+</div>
+<!-- Phone -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Teléfono de Contacto</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md" placeholder="+34 600 000 000" type="tel"/>
+</div>
+<!-- Pet Name -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Nombre de la Mascota</label>
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md" placeholder="Ej: Max" type="text"/>
+</div>
+<!-- Service Selection -->
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Tipo de Servicio</label>
+<select class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md appearance-none">
+<option value="">Selecciona un servicio</option>
+<option value="consulta">Consulta General</option>
+<option value="vacunacion">Vacunación y Desparasitación</option>
+<option value="cirugia">Cirugía</option>
+<option value="limpieza">Limpieza Dental</option>
+<option value="grooming">Estética / Peluquería</option>
+</select>
+</div>
+<!-- Date -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Fecha Preferida</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md" type="date"/>
+</div>
+</div>
+<!-- Time -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-outline block ml-1">Hora de Preferencia</label>
+<select class="w-full px-4 py-3 rounded-xl border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-background/50 outline-none transition-all font-body-md">
+<option value="mañana">Mañana (09:00 - 14:00)</option>
+<option value="tarde">Tarde (16:00 - 20:00)</option>
+</select>
+</div>
+<!-- Confirmation -->
+<div class="md:col-span-2 pt-4">
+<div class="flex items-start space-x-3 mb-6 p-4 bg-primary-fixed/10 rounded-xl">
+<input class="mt-1 rounded text-primary focus:ring-primary" type="checkbox"/>
+<p class="font-body-sm text-on-surface-variant">
+                                Acepto la <a class="text-primary font-semibold hover:underline" href="#">política de privacidad</a> y el tratamiento de mis datos para la gestión de la cita.
+                            </p>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary rounded-xl font-button text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all active:scale-95 flex items-center justify-center space-x-3" type="submit">
+<span>Confirmar Solicitud de Cita</span>
+<span class="material-symbols-outlined" data-icon="calendar_check">calendar_check</span>
+</button>
+<p class="text-center font-body-sm text-outline mt-4 flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined text-sm" data-icon="lock" style="font-size: 16px;">lock</span>
+<span>Tu información está protegida con encriptación SSL</span>
+</p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full rounded-t-3xl border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-16 max-w-7xl mx-auto font-manrope text-sm leading-relaxed">
+<div class="space-y-4">
+<div class="text-xl font-bold text-emerald-700 dark:text-emerald-500">PetCare Pro</div>
+<p class="text-slate-500 dark:text-slate-400">© 2024 PetCare Clínica Veterinaria. Excelencia médica para tu mejor amigo.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-emerald-600 dark:text-emerald-400">Servicios</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 underline-offset-4 hover:underline transition-all" href="#servicios">Servicios Médicos</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 underline-offset-4 hover:underline transition-all" href="#servicios">Urgencias 24h</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-emerald-600 dark:text-emerald-400">Compañía</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 underline-offset-4 hover:underline transition-all" href="#instalaciones">Nuestras Sedes</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 underline-offset-4 hover:underline transition-all" href="#nosotros">Blog de Salud</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-emerald-600 dark:text-emerald-400">Soporte</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 underline-offset-4 hover:underline transition-all" href="#privacidad">Política de Privacidad</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-emerald-500 underline-offset-4 hover:underline transition-all" href="#contacto">Contacto Directo</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

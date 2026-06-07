@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#9ecede",
+                    "surface-container-low": "#f0f3ff",
+                    "primary-fixed": "#b0f1c2",
+                    "on-background": "#111c2c",
+                    "primary": "#2d6a44",
+                    "on-secondary-fixed": "#001f27",
+                    "secondary-container": "#b7e7f7",
+                    "surface-tint": "#2d6a44",
+                    "surface-container-highest": "#d8e3fa",
+                    "secondary": "#356572",
+                    "on-secondary-container": "#3a6977",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#d8e3fa",
+                    "secondary-fixed": "#baeafa",
+                    "on-tertiary-container": "#525557",
+                    "tertiary": "#5c5f61",
+                    "outline-variant": "#c0c9bf",
+                    "surface": "#f9f9ff",
+                    "primary-container": "#98d8aa",
+                    "on-tertiary-fixed": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#95d5a7",
+                    "surface-container": "#e7eeff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "inverse-primary": "#95d5a7",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#cfdaf1",
+                    "on-secondary-fixed-variant": "#1a4d5a",
+                    "tertiary-container": "#c7cacc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-surface-variant": "#404941",
+                    "background": "#f9f9ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "surface-container-high": "#dee8ff",
+                    "outline": "#707971",
+                    "on-surface": "#111c2c",
+                    "surface-bright": "#f9f9ff",
+                    "on-primary-fixed": "#00210e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#22603b",
+                    "inverse-surface": "#263142",
+                    "on-primary-fixed-variant": "#10512e",
+                    "tertiary-fixed": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "40px",
+                    "unit": "4px",
+                    "container-margin": "20px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h1": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-900 shadow-[0_4px_20px_-4px_rgba(152,216,170,0.1)]">
+<div class="flex justify-between items-center px-5 py-4 w-full">
+<h1 class="text-xl font-extrabold tracking-tight text-emerald-600 dark:text-emerald-400 font-manrope">Serene Vet</h1>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full font-button text-body-sm active:scale-95 duration-200 transition-colors hover:bg-on-primary-fixed-variant">
+                Agendar cita
+            </button>
+</div>
+</header>
+<main class="pt-20 pb-32">
+<!-- Hero Section -->
+<section class="px-container-margin py-xl">
+<div class="relative overflow-hidden rounded-3xl bg-primary-container/20 p-8 flex flex-col gap-md">
+<div class="flex flex-col gap-xs">
+<span class="text-label-caps font-label-caps text-primary uppercase tracking-widest">Nosotros</span>
+<h2 class="text-h1 font-h1 text-on-surface">Cuidando lo que más quieres con <span class="text-primary">serenidad</span></h2>
+</div>
+<p class="text-body-md text-on-surface-variant max-w-md">
+                    En Serene Vet, combinamos la medicina veterinaria de vanguardia con un trato cálido y empático para asegurar el bienestar de tu mascota.
+                </p>
+</div>
+</section>
+<!-- Mission Statement (Bento Style) -->
+<section class="px-container-margin py-md grid grid-cols-1 gap-md">
+<div class="bg-surface-container-lowest p-lg rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.03)] border border-white">
+<div class="flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed-variant" data-icon="favorite">favorite</span>
+</div>
+<h3 class="text-h3 font-h3">Nuestra Misión</h3>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                    Nuestra misión es transformar el cuidado animal a través de la excelencia clínica y el apoyo emocional, creando un entorno libre de estrés tanto para las mascotas como para sus familias. Creemos en una medicina preventiva proactiva y en la educación constante.
+                </p>
+</div>
+</section>
+<!-- History Timeline -->
+<section class="px-container-margin py-xl">
+<div class="mb-lg">
+<h3 class="text-h2 font-h2 mb-2">Nuestra Historia</h3>
+<div class="h-1 w-12 bg-primary rounded-full"></div>
+</div>
+<div class="relative flex flex-col gap-lg">
+<!-- Timeline Track -->
+<div class="absolute left-[19px] top-0 bottom-0 w-0.5 bg-secondary-container"></div>
+<!-- Event 2010 -->
+<div class="flex gap-md relative">
+<div class="z-10 w-10 h-10 rounded-full bg-white border-4 border-secondary-container flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-secondary font-bold">2010</span>
+<h4 class="text-h3 font-h3 text-on-surface mb-1">El Comienzo</h4>
+<p class="text-body-sm text-on-surface-variant">Fundación de Serene Vet como un pequeño consultorio local enfocado en medicina preventiva.</p>
+</div>
+</div>
+<!-- Event 2015 -->
+<div class="flex gap-md relative">
+<div class="z-10 w-10 h-10 rounded-full bg-white border-4 border-secondary-container flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-secondary font-bold">2015</span>
+<h4 class="text-h3 font-h3 text-on-surface mb-1">Expansión</h4>
+<p class="text-body-sm text-on-surface-variant">Inauguramos nuestra unidad de cuidados intensivos y el laboratorio de diagnóstico avanzado.</p>
+</div>
+</div>
+<!-- Event 2023 -->
+<div class="flex gap-md relative">
+<div class="z-10 w-10 h-10 rounded-full bg-white border-4 border-secondary-container flex items-center justify-center shrink-0">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-secondary font-bold">2023</span>
+<h4 class="text-h3 font-h3 text-on-surface mb-1">Innovación Digital</h4>
+<p class="text-body-sm text-on-surface-variant">Lanzamiento de nuestra plataforma de telemedicina y monitoreo remoto para pacientes crónicos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialist Team -->
+<section class="px-container-margin py-xl bg-surface-container-low/50">
+<div class="mb-lg">
+<h3 class="text-h2 font-h2 mb-2">Nuestro Equipo</h3>
+<p class="text-body-md text-on-surface-variant">Expertos dedicados a la salud de tu mejor amigo.</p>
+</div>
+<div class="grid grid-cols-1 gap-lg">
+<!-- Dr 1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_12px_24px_-8px_rgba(0,0,0,0.06)] group">
+<div class="h-64 overflow-hidden">
+<img alt="Dra. Elena Méndez" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional portrait of a female veterinarian with glasses smiling warmly in a bright, modern clinical setting. She wears a clean white medical coat and a stethoscope around her neck. The lighting is soft and clinical, emphasizing the clean, serene atmosphere of a high-end veterinary clinic with soft green and celeste blue accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPUmCaRb5UzSbOZGUaLPBlyU3iNrvRPMPLbzMESY4K4wlWZFCPSjmZjGh33ZGc7IWMHfSrwvo7GHudsCD_EETso1YDBd1Xv_3pbctD_13fbv3ItPBK8hPkIXT05_kc6Ipz3FoO8_3bwwrcFJhxJHU9KMoSY1TbVGdUhn8sxl7lVw1i3Z8-wTv4-DHZ-oTrnnsuyDu0J-blMecc7Jh9GkXPBXUjrvg0OnJVmovOC_02nwSrJTZEwqulPBb4PrAySaLmA5YUvwV3TiQY"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h4 class="text-h3 font-h3 text-on-surface">Dra. Elena Méndez</h4>
+<p class="text-primary font-medium text-body-sm">Especialista en Medicina Interna</p>
+</div>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-[10px] font-bold rounded-full uppercase tracking-tighter">Director</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mb-md italic">"Mi pasión es entender el lenguaje silencioso de nuestros pacientes para devolverles la alegría."</p>
+<div class="flex gap-sm">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+</button>
+<button class="flex-1 h-10 rounded-full border border-primary text-primary font-button text-body-sm hover:bg-primary hover:text-white transition-colors">
+                                Ver perfil
+                            </button>
+</div>
+</div>
+</div>
+<!-- Dr 2 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_12px_24px_-8px_rgba(0,0,0,0.06)] group">
+<div class="h-64 overflow-hidden">
+<img alt="Dr. Ricardo Silva" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional male veterinarian with a friendly expression in a modern clinic. He is wearing blue medical scrubs and holding a digital tablet. The background features a blurred, minimalist veterinary office with natural light coming through large windows, creating a peaceful and clinical ambiance consistent with the serene vet brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnFXvJ7usnupNUpbkf0EFi-0_f4OAthiS8ALTwEFtMk_GBBmDlpouib06TYKACd1Pa51M9R6ASHxP6Kgvrojxvi5c7Ej8PcXqTIDk7jlRJwmBHM1AYyokVPDZGmmqw3l6KX7Gc8VleAmu0d9xzfS__RiJ4z1noNG1eoegqusd80RJ1EHCLB6Gc-SFI1JTPOzXXpHzImZ1PQ1Vi2HsAf4gpcL9mdUK-wfwfbN-bP4cciYfb-SxmrsfG-w28ED9oqlr-99CPPvL-8Mb9"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h4 class="text-h3 font-h3 text-on-surface">Dr. Ricardo Silva</h4>
+<p class="text-primary font-medium text-body-sm">Cirugía y Traumatología</p>
+</div>
+</div>
+<p class="text-body-sm text-on-surface-variant mb-md italic">"La precisión técnica y el cuidado post-operatorio son los pilares de una recuperación exitosa."</p>
+<div class="flex gap-sm">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+</button>
+<button class="flex-1 h-10 rounded-full border border-primary text-primary font-button text-body-sm hover:bg-primary hover:text-white transition-colors">
+                                Ver perfil
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-container-margin py-xl">
+<div class="bg-primary p-xl rounded-[2rem] text-center text-on-primary">
+<h3 class="text-h2 font-h2 mb-md">¿Quieres conocernos en persona?</h3>
+<p class="text-body-md opacity-90 mb-xl">Visita nuestras instalaciones y descubre por qué somos la clínica preferida de la ciudad.</p>
+<div class="flex flex-col gap-md">
+<button class="bg-white text-primary px-lg py-md rounded-2xl font-button text-body-md shadow-lg active:scale-95 transition-transform">
+                        Agendar recorrido
+                    </button>
+<button class="text-white border border-white/30 px-lg py-md rounded-2xl font-button text-body-md active:scale-95 transition-transform">
+                        Contactar ventas
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-10px_40px_rgba(0,0,0,0.04)] rounded-t-2xl z-50">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-emerald-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-manrope text-[11px] font-medium">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-2xl px-4 py-1.5 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="pets" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-manrope text-[11px] font-bold">Mascotas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-emerald-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="font-manrope text-[11px] font-medium">Citas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-emerald-500 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-manrope text-[11px] font-medium">Perfil</span>
+</a>
+</nav>
+</body></html>

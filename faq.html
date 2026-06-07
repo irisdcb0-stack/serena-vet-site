@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serena Vet | FAQ</title>
+  <meta name="description" content="Preguntas frecuentes sobre citas, urgencias, mascotas atendidas, métodos de pago y procesos de Serena Vet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="faq">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Serena Vet</strong><small>Cuidado clínico con calma</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html" data-page-link="inicio">Inicio</a>
+        <a href="servicios.html" data-page-link="servicios">Servicios</a>
+        <a href="instalaciones.html" data-page-link="instalaciones">Instalaciones</a>
+        <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
+        <a href="faq.html" data-page-link="faq">FAQ</a>
+        <a href="contacto.html" data-page-link="contacto">Contacto</a>
+        <a class="button button-small" href="agendar-cita.html" data-page-link="agendar-cita">Agendar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero-center">
+      <div class="container narrow reveal">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h1>Resolvemos tus dudas rápidamente.</h1>
+        <p>Una página específica para reducir fricción y hacer que el sitio realmente ayude antes de contactar.</p>
+      </div>
+    </section>
+
+    <section class="section compact-top">
+      <div class="container faq-stack">
+        <details class="faq-item reveal" open>
+          <summary>¿Cómo puedo agendar una cita online?</summary>
+          <p>Puedes hacerlo desde la página <a href="agendar-cita.html">Agendar cita</a>, completando el formulario con el servicio y horario que prefieras.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Atienden urgencias las 24 horas?</summary>
+          <p>Sí. Priorizamos casos críticos con evaluación rápida, estabilización y seguimiento del estado del paciente.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué tipos de mascotas atienden?</summary>
+          <p>Principalmente perros y gatos. También recibimos algunos pequeños mamíferos según disponibilidad del equipo.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Cuáles son los métodos de pago aceptados?</summary>
+          <p>Aceptamos efectivo, transferencias, tarjetas y algunos pagos móviles locales.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Ofrecen planes de salud preventiva?</summary>
+          <p>Sí. Incluyen vacunas, revisiones periódicas y orientación personalizada según la edad y estilo de vida.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Tienen servicio de peluquería?</summary>
+          <p>Sí. Manejamos grooming clínico con productos dermatológicos y técnicas de bajo estrés.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container newsletter-card reveal">
+        <div>
+          <h2>¿No encontraste lo que buscabas?</h2>
+          <p>Escríbenos y te ayudamos a decidir el servicio adecuado para tu mascota.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" name="newsletter-email" placeholder="Tu correo electrónico" required>
+          <button class="button button-small" type="submit">Suscribirse</button>
+        </form>
+        <p class="form-message" id="newsletter-message" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Serena Vet</strong><p>Excelencia médica y calidez humana.</p></div>
+      <div><h4>Navegación</h4><a href="servicios.html">Servicios médicos</a><a href="contacto.html">Nuestras sedes</a></div>
+      <div><h4>Recursos</h4><a href="nosotros.html">Equipo</a><a href="agendar-cita.html">Agendar</a></div>
+      <div><h4>Ayuda</h4><a href="contacto.html">Contacto</a><a href="faq.html">Preguntas frecuentes</a></div>
+    </div>
+    <div class="container footer-bottom"><p>© <span data-year></span> Serena Vet.</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

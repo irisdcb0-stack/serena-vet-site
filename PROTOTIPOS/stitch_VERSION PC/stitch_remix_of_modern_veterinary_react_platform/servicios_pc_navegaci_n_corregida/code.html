@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#2d6a44",
+                    "background": "#f9f9ff",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c0c9bf",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#b0f1c2",
+                    "surface-container-high": "#dee8ff",
+                    "outline": "#707971",
+                    "on-secondary-fixed": "#001f27",
+                    "error": "#ba1a1a",
+                    "surface-container": "#e7eeff",
+                    "on-tertiary-container": "#525557",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary": "#5c5f61",
+                    "on-primary-fixed-variant": "#10512e",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f0f3ff",
+                    "on-surface-variant": "#404941",
+                    "surface-container-highest": "#d8e3fa",
+                    "on-surface": "#111c2c",
+                    "secondary-fixed": "#baeafa",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed-dim": "#9ecede",
+                    "on-secondary-fixed-variant": "#1a4d5a",
+                    "on-primary-fixed": "#00210e",
+                    "surface": "#f9f9ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "tertiary-container": "#c7cacc",
+                    "secondary": "#356572",
+                    "tertiary-fixed": "#e0e3e5",
+                    "inverse-primary": "#95d5a7",
+                    "on-primary-container": "#22603b",
+                    "primary-container": "#98d8aa",
+                    "on-secondary-container": "#3a6977",
+                    "surface-variant": "#d8e3fa",
+                    "on-background": "#111c2c",
+                    "surface-dim": "#cfdaf1",
+                    "secondary-container": "#b7e7f7",
+                    "inverse-surface": "#263142",
+                    "primary-fixed-dim": "#95d5a7",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#2d6a44",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#191c1e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "md": "16px",
+                    "unit": "4px",
+                    "xl": "40px",
+                    "lg": "24px",
+                    "container-margin": "20px",
+                    "sm": "8px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Manrope"],
+                    "h3": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "button": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 20px 40px -10px rgba(53, 101, 114, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar from JSON -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm font-manrope antialiased">
+<div class="flex justify-between items-center px-12 py-5 max-w-full mx-auto">
+<div class="text-2xl font-bold tracking-tight text-primary">PetCare Pro</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-semibold" href="servicios.html">Servicios</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="instalaciones.html">Instalaciones</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+<a class="text-slate-600 hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-button hover:opacity-90 active:scale-95 transition-all inline-block text-center" href="citas.html">Agendar cita</a>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20 text-center">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4 block">Nuestros Servicios</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-6 md:text-5xl lg:text-6xl max-w-3xl mx-auto">Cuidado integral diseñado para su bienestar.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Ofrecemos una gama completa de servicios veterinarios de alta calidad, combinando tecnología avanzada con un trato humano y cálido.
+            </p>
+</header>
+<!-- Services Grid: 3 columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service Card 1: Consulta General -->
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="medical_services">medical_services</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Consulta general</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Evaluaciones preventivas exhaustivas para asegurar que su mascota crezca sana y feliz. Revisamos cada aspecto de su salud, desde el pelaje hasta el sistema cardíaco.
+                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Revisión física completa
+                    </li>
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Diagnóstico temprano
+                    </li>
+</ul>
+<button class="text-primary font-button flex items-center gap-2 group/btn">
+                    Saber más <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 2: Vacunación -->
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-secondary-container flex items-center justify-center rounded-2xl mb-8 text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="vaccines">vaccines</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Vacunación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Esquemas de inmunización personalizados según el estilo de vida y edad de su mascota. Protegemos a su mejor amigo contra las enfermedades más comunes y peligrosas.
+                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Protocolos actualizados
+                    </li>
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Recordatorios automáticos
+                    </li>
+</ul>
+<button class="text-primary font-button flex items-center gap-2 group/btn">
+                    Ver calendario <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 3: Cirugía -->
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-tertiary-container flex items-center justify-center rounded-2xl mb-8 text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="biotech">biotech</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Cirugía</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Contamos con un quirófano totalmente equipado y anestesia monitorizada para procedimientos preventivos y complejos con la máxima seguridad.
+                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Monitorización avanzada
+                    </li>
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Recuperación controlada
+                    </li>
+</ul>
+<button class="text-primary font-button flex items-center gap-2 group/btn">
+                    Instalaciones <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 4: Emergencias -->
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow group border-2 border-transparent hover:border-error-container hover:-translate-y-1 transition-all duration-300">
+<div class="w-14 h-14 bg-error-container flex items-center justify-center rounded-2xl mb-8 text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="emergency">emergency</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Emergencias</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Atención inmediata 24/7 para casos críticos. Nuestro equipo de urgencias está siempre listo para actuar con rapidez y precisión quirúrgica.
+                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Atención inmediata 24h
+                    </li>
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Laboratorio propio
+                    </li>
+</ul>
+<button class="text-error font-button flex items-center gap-2 group/btn">
+                    Llamar ahora <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="phone_in_talk">phone_in_talk</span>
+</button>
+</div>
+<!-- Service Card 5: Peluquería -->
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-secondary-container flex items-center justify-center rounded-2xl mb-8 text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="content_cut">content_cut</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Peluquería</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Estética canina y felina con un enfoque en el bienestar. Utilizamos productos dermatológicos y técnicas de bajo estrés para una experiencia relajante.
+                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Baños terapéuticos
+                    </li>
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Corte según raza
+                    </li>
+</ul>
+<button class="text-primary font-button flex items-center gap-2 group/btn">
+                    Ver estilos <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Service Card 6: Desparasitación -->
+<div class="bg-surface-container-lowest p-8 rounded-xl soft-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="pest_control">pest_control</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Desparasitación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                    Control efectivo de parásitos internos y externos. Protegemos no solo a su mascota, sino a toda su familia de enfermedades zoonóticas.
+                </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Tratamientos orales y tópicos
+                    </li>
+<li class="flex items-center gap-3 text-body-sm font-body-sm text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Prevención estacional
+                    </li>
+</ul>
+<button class="text-primary font-button flex items-center gap-2 group/btn">
+                    Consultar marcas <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Secondary CTA Section -->
+<section class="mt-24 bg-surface-container-high rounded-3xl p-12 flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+<div class="flex-1 z-10">
+<h2 class="font-h2 text-h2 text-on-surface mb-6">¿Tu mascota necesita atención especializada?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    Agenda una cita hoy mismo y deja la salud de tu mejor amigo en manos de expertos apasionados por los animales.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-8 py-3.5 rounded-full font-button hover:opacity-90 shadow-lg shadow-primary/20 transition-all inline-block text-center" href="citas.html">Solicitar cita online</a>
+<button class="bg-white text-secondary border border-secondary px-8 py-3.5 rounded-full font-button hover:bg-secondary/5 transition-all">
+                        Ver ubicación
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full max-w-md aspect-square relative rounded-2xl overflow-hidden">
+<img alt="Veterinario profesional acariciando a un perro labrador" class="object-cover w-full h-full" data-alt="close-up of a smiling veterinarian in clinical attire gently examining a golden retriever in a bright modern medical office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZX7vdPFngWCgOUYiT_jPZLQp-e-9Le4AimtyFm8pRNlI26bdJFDl5-akRHmEWC5QbFO4Nj8Tfzw4-IHUWpY4O8UTFtCZCVfN-_ZyX8XQrdAFWpuKlL83gh7cS0xMBPxafwt09x-VVnf6rjRWnSjYc3ToauJArYRilKSYeudoPEgHqHibmFCFiaEhO-U6nsXIqvU9lB-XwmrnW2e4RddG-Qk3VZi8NQufA76RBk2-nB6VX3JAiHGpD7b-C6xS84MetKRC7ZHsHh3Ge"/>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="bg-slate-50 border-t border-slate-200 rounded-t-3xl font-manrope text-sm leading-relaxed">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-16 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-emerald-700 mb-6">PetCare Pro</div>
+<p class="text-slate-500 mb-4">Excelencia médica para tu mejor amigo desde 2012.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-emerald-600" data-icon="share">share</span>
+<span class="material-symbols-outlined text-emerald-600" data-icon="public">public</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Servicios</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-emerald-500 transition-all" href="servicios.html">Servicios Médicos</a></li>
+<li><a class="text-slate-500 hover:text-emerald-500 transition-all" href="servicios.html">Urgencias 24h</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Compañía</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-emerald-500 transition-all" href="instalaciones.html">Nuestras Sedes</a></li>
+<li><a class="text-slate-500 hover:text-emerald-500 transition-all" href="nosotros.html">Blog de Salud</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-emerald-500 transition-all" href="#">Política de Privacidad</a></li>
+<li><a class="text-slate-500 hover:text-emerald-500 transition-all" href="contacto.html">Contacto Directo</a></li>
+</ul>
+</div>
+</div>
+<div class="px-16 pb-12 max-w-7xl mx-auto text-slate-400 text-xs text-center border-t border-slate-100 pt-8">
+            © 2024 PetCare Clínica Veterinaria. Excelencia médica para tu mejor amigo.
+        </div>
+</footer>
+</body></html>

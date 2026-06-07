@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Serene Vet - Cuidado con Alma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#9ecede",
+                      "surface-container-low": "#f0f3ff",
+                      "primary-fixed": "#b0f1c2",
+                      "on-background": "#111c2c",
+                      "primary": "#2d6a44",
+                      "on-secondary-fixed": "#001f27",
+                      "secondary-container": "#b7e7f7",
+                      "surface-tint": "#2d6a44",
+                      "surface-container-highest": "#d8e3fa",
+                      "secondary": "#356572",
+                      "on-secondary-container": "#3a6977",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#d8e3fa",
+                      "secondary-fixed": "#baeafa",
+                      "on-tertiary-container": "#525557",
+                      "tertiary": "#5c5f61",
+                      "outline-variant": "#c0c9bf",
+                      "surface": "#f9f9ff",
+                      "primary-container": "#98d8aa",
+                      "on-tertiary-fixed": "#191c1e",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#95d5a7",
+                      "surface-container": "#e7eeff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "inverse-primary": "#95d5a7",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#cfdaf1",
+                      "on-secondary-fixed-variant": "#1a4d5a",
+                      "tertiary-container": "#c7cacc",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-surface-variant": "#404941",
+                      "background": "#f9f9ff",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "surface-container-high": "#dee8ff",
+                      "outline": "#707971",
+                      "on-surface": "#111c2c",
+                      "surface-bright": "#f9f9ff",
+                      "on-primary-fixed": "#00210e",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#22603b",
+                      "inverse-surface": "#263142",
+                      "on-primary-fixed-variant": "#10512e",
+                      "tertiary-fixed": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "40px",
+                      "unit": "4px",
+                      "container-margin": "20px",
+                      "lg": "24px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "button": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h3": ["Manrope"],
+                      "h2": ["Manrope"],
+                      "body-sm": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "h1": ["Manrope"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-white/95 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 shadow-[0_4px_20px_-4px_rgba(152,216,170,0.1)]">
+<div class="flex justify-between items-center px-5 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">pets</span>
+<h1 class="text-xl font-extrabold tracking-tight text-emerald-600 font-manrope">Serene Vet</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full font-button text-body-sm active:scale-95 transition-all">
+                    Agendar cita
+                </button>
+<button class="text-slate-600 p-1">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-[72px] pb-32">
+<!-- Hero Section -->
+<section class="px-5 py-8">
+<div class="relative overflow-hidden rounded-[2rem] bg-surface-container-low min-h-[480px] flex flex-col justify-end p-6">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A serene close-up photograph of a golden retriever dog and a tabby cat sitting together in a sunlit, modern living room. The lighting is soft and warm, highlighting the clinical yet compassionate atmosphere of the scene. The overall aesthetic is minimalist with a palette of soft whites and pastel greens, conveying a sense of professional care and emotional tranquility for pet parents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIUdIuzABoVB3h-v0zO6Utc-BwlLQUUgoLmw8F8AsWLCxrZXiMMwVl8G7LGdJsUXQHDf3x43MCBUtcx87E_gtIKgOpDDoOrlcdaXPD1BqKzhFZsqAYvC3ZV48d4OtMtKZDe0QxPWC8mQ6XLNcfl97It7ROqnnT21Xs-a7hloIglg0f09l1DQ_wZFDpEw6gRW6u-0dlQR1o68sgFaVjPVFmKeAiHyikVQ-r8ofQWunSMWyuDF10L0he7qVTJ7NH7NEkQfYoX_GBHgF2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-4">
+<div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+                        Abierto ahora
+                    </div>
+<h2 class="text-white font-h1 text-h1 leading-tight">Cuidado experto para quien más amas.</h2>
+<p class="text-white/90 font-body-md text-body-md max-w-[280px]">Medicina de vanguardia con un trato humano y cercano en el corazón de la ciudad.</p>
+<div class="flex flex-col gap-3 pt-2">
+<button class="w-full bg-primary-container text-on-primary-container py-4 rounded-xl font-button active:scale-[0.98] transition-transform">
+                            Ver Servicios
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-5 py-6">
+<div class="flex items-end justify-between mb-6">
+<div>
+<span class="text-primary font-label-caps uppercase tracking-widest block mb-2">Especialidades</span>
+<h3 class="font-h2 text-h2 text-on-background">Nuestros Servicios</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Service Card 1 -->
+<div class="bg-white p-5 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-slate-50 flex items-start gap-4">
+<div class="bg-primary-container/20 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">vaccines</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 mb-1">Medicina Preventiva</h4>
+<p class="text-slate-500 text-body-sm">Planes de vacunación y chequeos integrales para una vida larga.</p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-white p-5 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-slate-50 flex items-start gap-4">
+<div class="bg-secondary-container/30 p-3 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-3xl">medical_services</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 mb-1">Cirugía Especializada</h4>
+<p class="text-slate-500 text-body-sm">Quirófano de alta tecnología y monitoreo continuo post-operatorio.</p>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-primary text-on-primary p-6 rounded-2xl shadow-xl flex flex-col justify-between min-h-[160px] relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined">alarm</span>
+<span class="font-label-caps uppercase">Disponibilidad Inmediata</span>
+</div>
+<h4 class="font-h2 text-h2 mb-1">Urgencias 24h</h4>
+<p class="text-primary-fixed/80 text-body-sm">Estamos aquí cuando más nos necesitas, sin cita previa.</p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10 rotate-12">emergency_home</span>
+</div>
+</div>
+</section>
+<!-- Sobre Nosotros Section (Bento Inspired) -->
+<section class="px-5 py-10 bg-surface-container-lowest">
+<span class="text-primary font-label-caps uppercase tracking-widest block mb-2">Filosofía</span>
+<h3 class="font-h2 text-h2 mb-6">Sobre Nosotros</h3>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-6 rounded-3xl">
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed italic">
+                        "En Serene Vet, no solo tratamos pacientes; cuidamos de miembros de la familia con la precisión de la ciencia y el calor del hogar."
+                    </p>
+<div class="mt-6 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" data-alt="Professional portrait of a friendly female veterinarian in a clean, modern white clinical coat, smiling warmly. The background is a soft-focus veterinary clinic with minimalist pastel green accents and soft daylight. She represents the empathetic and highly skilled medical team at Serene Vet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz21WnVW4W_nBY7cY0Cs-Q2b4Rg1tfX5AE74aWbiIzJKM3hdIRG1qA0Xs4OP9dCk8bsY8ZS17aKggyC8BEx9F3yT2l0Kn_lH6BseTJ8fRSsqvQOWHRcJiWxN8ctq5cT5ymXrd03xlP0qmnvi6RPfuJULwxyZxTFgGxfOUXIbwTOwUUl_ZujSldS28WB_7fSEkvJPuLbgGDXlHn-kR7GrMbiI_nIlz2S6FNgUlW9hir6ck2GSdC4EER8jNliKnwqUxTkglkiCtw8zFk"/>
+<div>
+<p class="font-button text-on-background">Dra. Elena Santos</p>
+<p class="text-slate-500 text-xs">Directora Médica</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+<span class="text-primary font-h2 text-h1 block">15+</span>
+<span class="text-slate-500 text-xs font-label-caps uppercase">Años de experiencia</span>
+</div>
+<div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+<span class="text-secondary font-h2 text-h1 block">4.9</span>
+<div class="flex text-amber-400 scale-75 -ml-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-10">
+<div class="px-5 mb-6">
+<span class="text-primary font-label-caps uppercase tracking-widest block mb-2">Comunidad</span>
+<h3 class="font-h2 text-h2">Voces de Confianza</h3>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 px-5 snap-x">
+<!-- Testimonial 1 -->
+<div class="min-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-slate-50 snap-center">
+<div class="flex text-amber-400 mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mb-6 leading-relaxed">
+                        "El nivel de atención es incomparable. Salvaron a mi gato después de un accidente nocturno. Estaré eternamente agradecida."
+                    </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary font-bold text-xs uppercase">
+                            RM
+                        </div>
+<div>
+<p class="font-button text-on-background text-sm">Ricardo Martínez</p>
+<p class="text-slate-400 text-xs">Dueño de Toby</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-slate-50 snap-center">
+<div class="flex text-amber-400 mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mb-6 leading-relaxed">
+                        "Las instalaciones son impecables y el trato de los enfermeros es de una calidez que ya no se encuentra. Muy profesionales."
+                    </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/40 flex items-center justify-center text-primary font-bold text-xs uppercase">
+                            LG
+                        </div>
+<div>
+<p class="font-button text-on-background text-sm">Lucía García</p>
+<p class="text-slate-400 text-xs">Dueña de Luna</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-5 py-6">
+<div class="bg-secondary text-white p-8 rounded-[2.5rem] text-center space-y-4">
+<h3 class="font-h2 text-h2">¿Tu mascota necesita atención?</h3>
+<p class="text-secondary-fixed opacity-90 text-body-md">Reserva una cita hoy mismo y regálale el bienestar que merece.</p>
+<button class="bg-white text-secondary w-full py-4 rounded-2xl font-button active:scale-95 transition-transform">
+                    Contactar Ahora
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white flex justify-around items-center px-4 pb-6 pt-3 rounded-t-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.04)] border-t border-slate-100 z-50">
+<!-- Inicio (Active) -->
+<a class="flex flex-col items-center justify-center bg-emerald-50 text-emerald-700 rounded-2xl px-4 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-manrope text-[11px] font-medium mt-1">Inicio</span>
+</a>
+<!-- Mascotas -->
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-emerald-500 transition-all" href="#">
+<span class="material-symbols-outlined">pets</span>
+<span class="font-manrope text-[11px] font-medium mt-1">Mascotas</span>
+</a>
+<!-- Citas -->
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-emerald-500 transition-all" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-manrope text-[11px] font-medium mt-1">Citas</span>
+</a>
+<!-- Perfil -->
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-emerald-500 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-manrope text-[11px] font-medium mt-1">Perfil</span>
+</a>
+</nav>
+</body></html>

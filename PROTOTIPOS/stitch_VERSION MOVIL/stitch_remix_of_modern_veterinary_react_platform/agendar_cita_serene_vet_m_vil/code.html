@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#9ecede",
+                    "surface-container-low": "#f0f3ff",
+                    "primary-fixed": "#b0f1c2",
+                    "on-background": "#111c2c",
+                    "primary": "#2d6a44",
+                    "on-secondary-fixed": "#001f27",
+                    "secondary-container": "#b7e7f7",
+                    "surface-tint": "#2d6a44",
+                    "surface-container-highest": "#d8e3fa",
+                    "secondary": "#356572",
+                    "on-secondary-container": "#3a6977",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#d8e3fa",
+                    "secondary-fixed": "#baeafa",
+                    "on-tertiary-container": "#525557",
+                    "tertiary": "#5c5f61",
+                    "outline-variant": "#c0c9bf",
+                    "surface": "#f9f9ff",
+                    "primary-container": "#98d8aa",
+                    "on-tertiary-fixed": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#95d5a7",
+                    "surface-container": "#e7eeff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "inverse-primary": "#95d5a7",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#cfdaf1",
+                    "on-secondary-fixed-variant": "#1a4d5a",
+                    "tertiary-container": "#c7cacc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-surface-variant": "#404941",
+                    "background": "#f9f9ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "surface-container-high": "#dee8ff",
+                    "outline": "#707971",
+                    "on-surface": "#111c2c",
+                    "surface-bright": "#f9f9ff",
+                    "on-primary-fixed": "#00210e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#22603b",
+                    "inverse-surface": "#263142",
+                    "on-primary-fixed-variant": "#10512e",
+                    "tertiary-fixed": "#e0e3e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "40px",
+                    "unit": "4px",
+                    "container-margin": "20px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h1": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { width: 32px; background-color: #2d6a44; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background antialiased min-h-screen pb-24">
+<!-- Top Navigation Bar (Close Action Focus) -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 flex justify-between items-center px-5 py-4">
+<button class="text-slate-600 active:scale-95 duration-200 p-1">
+<span class="material-symbols-outlined text-[28px]">close</span>
+</button>
+<h1 class="font-h3 text-h3 text-on-surface">Agendar cita</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="mt-20 px-container-margin max-w-md mx-auto">
+<!-- Progress Stepper -->
+<div class="flex items-center justify-between mb-8 px-4">
+<div class="flex flex-col items-center gap-2">
+<div class="h-1.5 w-12 rounded-full bg-primary transition-all duration-500"></div>
+<span class="font-label-caps text-label-caps text-primary">Info</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="h-1.5 w-12 rounded-full bg-surface-variant transition-all duration-500"></div>
+<span class="font-label-caps text-label-caps text-tertiary">Servicio</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="h-1.5 w-12 rounded-full bg-surface-variant transition-all duration-500"></div>
+<span class="font-label-caps text-label-caps text-tertiary">Fecha</span>
+</div>
+</div>
+<!-- Form Canvas -->
+<div class="space-y-8">
+<!-- Section Title -->
+<section>
+<h2 class="font-h2 text-h2 mb-2">Información general</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cuéntanos sobre tu mascota y cómo podemos contactarte.</p>
+</section>
+<!-- Pet Selection (Bento-style Horizontal Scroll) -->
+<section>
+<label class="font-label-caps text-label-caps text-tertiary mb-4 block uppercase tracking-wider">Tu Mascota</label>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-2 px-2">
+<!-- Pet Card Active -->
+<button class="flex-shrink-0 w-32 bg-white p-4 rounded-xl shadow-[0_10px_30px_rgba(45,106,68,0.08)] border-2 border-primary text-left transition-all">
+<div class="w-12 h-12 rounded-full bg-primary-fixed mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">pets</span>
+</div>
+<p class="font-button text-primary">Luna</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Golden Ret.</p>
+</button>
+<!-- Pet Card Inactive -->
+<button class="flex-shrink-0 w-32 bg-white p-4 rounded-xl border-2 border-slate-50 text-left transition-all hover:bg-surface-container-low">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">pets</span>
+</div>
+<p class="font-button text-on-surface">Oliver</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Siamés</p>
+</button>
+<!-- Add New Pet -->
+<button class="flex-shrink-0 w-32 bg-surface-container p-4 rounded-xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center text-center">
+<div class="w-10 h-10 rounded-full border border-outline border-dashed mb-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">add</span>
+</div>
+<p class="font-body-sm text-tertiary">Nueva</p>
+</button>
+</div>
+</section>
+<!-- Input Group -->
+<section class="grid grid-cols-1 gap-6">
+<!-- Owner Details -->
+<div class="space-y-4">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-tertiary mb-2 block">Nombre del Dueño</label>
+<input class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-container focus:border-primary transition-all outline-none text-on-surface font-body-md" placeholder="Nombre completo" type="text" value="Andrés García"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-tertiary mb-2 block">Teléfono de contacto</label>
+<input class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-container focus:border-primary transition-all outline-none text-on-surface font-body-md" placeholder="Número de teléfono" type="tel" value="+52 55 1234 5678"/>
+</div>
+</div>
+<!-- Service Selection Card -->
+<div class="bg-primary-container/20 p-5 rounded-2xl border border-primary-container/40">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<div>
+<h3 class="font-button text-on-primary-container mb-1">Consulta General</h3>
+<p class="font-body-sm text-on-primary-fixed-variant leading-tight">Revisión completa, signos vitales y asesoría nutricional.</p>
+</div>
+<span class="material-symbols-outlined text-primary ml-auto">expand_more</span>
+</div>
+</div>
+<!-- Date & Time Picker Mockup -->
+<div class="bg-white p-5 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-50">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">calendar_today</span>
+<span class="font-button text-on-surface">Jueves, 24 Octubre</span>
+</div>
+<button class="text-primary font-label-caps">Cambiar</button>
+</div>
+<label class="font-label-caps text-label-caps text-tertiary mb-3 block">Horarios disponibles</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2.5 rounded-lg border border-primary bg-primary-container/10 text-primary font-button text-sm">09:00</button>
+<button class="py-2.5 rounded-lg border border-slate-100 bg-slate-50 text-tertiary font-button text-sm">10:30</button>
+<button class="py-2.5 rounded-lg border border-slate-100 bg-slate-50 text-tertiary font-button text-sm">12:00</button>
+<button class="py-2.5 rounded-lg border border-slate-100 bg-slate-50 text-tertiary font-button text-sm">15:30</button>
+<button class="py-2.5 rounded-lg border border-slate-100 bg-slate-50 text-tertiary font-button text-sm">17:00</button>
+<button class="py-2.5 rounded-lg border border-slate-100 bg-slate-50 text-tertiary font-button text-sm">18:30</button>
+</div>
+</div>
+<!-- Notes -->
+<div class="relative">
+<label class="font-label-caps text-label-caps text-tertiary mb-2 block">Notas adicionales (opcional)</label>
+<textarea class="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-container focus:border-primary transition-all outline-none text-on-surface font-body-md resize-none" placeholder="¿Algún síntoma o requerimiento especial?" rows="3"></textarea>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Action Area (Sticky) -->
+<footer class="fixed bottom-0 left-0 w-full bg-white p-6 pb-8 shadow-[0_-10px_40px_rgba(0,0,0,0.04)] border-t border-slate-50 z-50">
+<div class="max-w-md mx-auto flex gap-4">
+<button class="flex-1 py-4 px-6 rounded-2xl bg-primary text-white font-button shadow-[0_8px_20px_-4px_rgba(45,106,68,0.3)] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span>Confirmar Cita</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</footer>
+<!-- Image Data Prompt (Contextual Background Illustration for Aesthetics) -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 opacity-5 pointer-events-none">
+<img class="w-[600px] h-auto grayscale" data-alt="A serene and minimalist illustration of a veterinary clinic waiting room in a light mode aesthetic. The scene features soft pastel green and celeste blue accents with clean white lines and plenty of negative space. Warm morning sunlight filters through a large window, casting soft, long shadows on a polished floor. The atmosphere is peaceful, professional, and empathetic, reflecting a modern healthcare environment for pets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASQ-tUlc_Hj0xHkUZP6pfIc1N_Aq_GAPxivaPuJahuH_8W8KFB2xhZvvXsq99lsrNDz9PFiGNIEQytGbhS2-69fEXo8fJqzQyNdV9fbvPZA74Ug4CFtZzA3PTNPdIpYkSjeJjIWp-YetXtjY9Z0V6D9CIgLYj-7puzSSCrb26zdsLVCn9ePBmOQ9FWxrYmdfCkZVCTo0gf2vjquBzajwrZV4gxgMofBBcO0oNExSZb3ecYCNXGkCOKwu2kAfG_yPsWFm2himdEwyYm"/>
+</div>
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serena Vet | Agendar cita</title>
+  <meta name="description" content="Solicita una cita en Serena Vet con un formulario claro, datos de contacto y ubicación visible en Cochabamba, Bolivia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="agendar-cita">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span class="brand-copy"><strong>Serena Vet</strong><small>Cuidado clínico con calma</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html" data-page-link="inicio">Inicio</a>
+        <a href="servicios.html" data-page-link="servicios">Servicios</a>
+        <a href="instalaciones.html" data-page-link="instalaciones">Instalaciones</a>
+        <a href="nosotros.html" data-page-link="nosotros">Nosotros</a>
+        <a href="faq.html" data-page-link="faq">FAQ</a>
+        <a href="contacto.html" data-page-link="contacto">Contacto</a>
+        <a class="button button-small" href="agendar-cita.html" data-page-link="agendar-cita">Agendar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container appointment-grid">
+        <div class="appointment-copy reveal">
+          <h1>Solicita una cita con atención clara y rápida.</h1>
+          <p>
+            Nuestro equipo está comprometido con brindar excelencia y calidez en cada consulta.
+            Tu tranquilidad también es parte del tratamiento.
+          </p>
+          <div class="info-grid">
+            <article class="soft-info-card"><strong>Atención 24/7</strong><span>Urgencias médicas en cualquier momento del día.</span></article>
+            <article class="soft-info-card"><strong>Especialistas</strong><span>Médicos certificados en diversas áreas veterinarias.</span></article>
+          </div>
+          <article class="quote-card">
+            <p>“Tratamos a cada paciente como si fuera parte de nuestra propia familia.”</p>
+            <strong>Dra. Elena Méndez, directora médica</strong>
+          </article>
+          <div class="contact-line">
+            <p><strong>Llámanos</strong> +591 4 4123345</p>
+            <p><strong>Visítanos</strong> Av. Melchor Pérez de Olguín, Cochabamba</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <form class="appointment-form" id="appointment-form">
+            <div class="field">
+              <label for="owner-name">Nombre completo</label>
+              <input id="owner-name" name="owner-name" type="text" placeholder="Ej: Daniela Pérez" required>
+            </div>
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="field">
+              <label for="phone">Teléfono de contacto</label>
+              <input id="phone" name="phone" type="tel" placeholder="+591 7XX XXX XX" required>
+            </div>
+            <div class="field">
+              <label for="pet-name">Nombre de la mascota</label>
+              <input id="pet-name" name="pet-name" type="text" placeholder="Ej: Max" required>
+            </div>
+            <div class="field field-full">
+              <label for="service">Tipo de servicio</label>
+              <select id="service" name="service" required>
+                <option value="">Selecciona un servicio</option>
+                <option>Consulta general</option>
+                <option>Vacunación</option>
+                <option>Urgencia</option>
+                <option>Cirugía</option>
+                <option>Peluquería clínica</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="date">Fecha preferida</label>
+              <input id="date" name="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="time">Hora de preferencia</label>
+              <select id="time" name="time" required>
+                <option value="">Selecciona un turno</option>
+                <option>Mañana</option>
+                <option>Tarde</option>
+              </select>
+            </div>
+            <div class="field field-full">
+              <label for="notes">Detalles del caso</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Síntomas, consulta preventiva, control, etc."></textarea>
+            </div>
+            <label class="checkbox field-full">
+              <input type="checkbox" required>
+              <span>Acepto la política de privacidad y el tratamiento de datos para gestionar la cita.</span>
+            </label>
+            <button class="button field-full" type="submit">Confirmar solicitud de cita</button>
+            <p class="form-message field-full" id="form-message" aria-live="polite"></p>
+          </form>
+
+          <div class="appointments-list-card">
+            <h3>Solicitudes recientes</h3>
+            <div id="appointments-list">Cargando...</div>
+          </div>
+
+          <div class="mini-map-card">
+            <div class="mini-map-frame">
+              <iframe
+                title="Mapa compacto de Serena Vet"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-66.1768%2C-17.4026%2C-66.1410%2C-17.3670&layer=mapnik&marker=-17.3847%2C-66.1589"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="mini-map-copy">
+              <strong>Ubicación visible en Cochabamba</strong>
+              <p>Elegí una ubicación aleatoria y plausible dentro de Cochabamba para que se vea directamente en el recuadro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Serena Vet</strong><p>Excelencia médica para tu mejor amigo.</p></div>
+      <div><h4>Servicios</h4><a href="servicios.html">Servicios médicos</a><a href="servicios.html">Urgencias 24h</a></div>
+      <div><h4>Compañía</h4><a href="nosotros.html">Nuestras sedes</a><a href="faq.html">Blog de salud</a></div>
+      <div><h4>Soporte</h4><a href="contacto.html">Contacto directo</a><a href="faq.html">Política de privacidad</a></div>
+    </div>
+    <div class="container footer-bottom"><p>© <span data-year></span> Serena Vet.</p></div>
+  </footer>
+
+  <!-- Supabase client (CDN) and local config: copy supabase-config.example.js -> supabase-config.js and fill keys -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+  <script src="supabase-config.js"></script>
+  <!-- EmailJS (optional) - sign up at https://www.emailjs.com/ and copy keys to emailjs-config.js -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="emailjs-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
