@@ -8,9 +8,11 @@ Pasos rápidos para crear la base de datos y conectar la web a Supabase:
 
 2. Ejecutar esquema
    - Abre el SQL editor del proyecto y ejecuta el contenido de `supabase.sql`.
+   - Si ya tienes Row Level Security activado (RLS) en la tabla `appointments`, también ejecuta `rls_policies.sql`.
 
 3. Añadir archivo de configuración
    - Copia `supabase-config.example.js` a `supabase-config.js` y rellena `SUPABASE_URL` y `SUPABASE_ANON_KEY`.
+   - Si despliegas en Netlify o GitHub Actions, puedes usar las variables de entorno `SUPABASE_URL` y `SUPABASE_ANON_KEY`; el despliegue generará `supabase-config.js` automáticamente.
 
 4. Incluir scripts en tu HTML
    - Asegúrate de que `agendar-cita.html` incluye estos scripts antes de `script.js`:

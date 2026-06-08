@@ -68,6 +68,23 @@
               <label for="pet-name">Nombre de la mascota</label>
               <input id="pet-name" name="pet-name" type="text" placeholder="Ej: Max" required>
             </div>
+            <div class="field">
+              <label for="pet-type">Especie</label>
+              <select id="pet-type" name="pet-type" required>
+                <option value="">Selecciona especie</option>
+                <option>Perro</option>
+                <option>Gato</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="pet-breed">Raza</label>
+              <input id="pet-breed" name="pet-breed" type="text" placeholder="Ej: Pastor Alemán" required>
+            </div>
+            <div class="field">
+              <label for="pet-age">Edad</label>
+              <input id="pet-age" name="pet-age" type="text" placeholder="Ej: 3 años" required>
+            </div>
             <div class="field field-full">
               <label for="service">Tipo de servicio</label>
               <select id="service" name="service" required>
@@ -87,9 +104,8 @@
               <label for="time">Hora de preferencia</label>
               <select id="time" name="time" required>
                 <option value="">Selecciona un turno</option>
-                <option>Mañana</option>
-                <option>Tarde</option>
               </select>
+              <p id="time-helper" class="form-message">Selecciona una fecha para ver los horarios disponibles.</p>
             </div>
             <div class="field field-full">
               <label for="notes">Detalles del caso</label>
@@ -103,7 +119,26 @@
             <p class="form-message field-full" id="form-message" aria-live="polite"></p>
           </form>
 
-          <div class="appointments-list-card">
+          <div class="calendar-card field-full">
+            <div class="calendar-header">
+              <button id="calendar-prev" type="button" class="button button-ghost">‹</button>
+              <div>
+                <strong id="calendar-month">Calendario</strong>
+                <p class="small" id="calendar-description">Selecciona un día para ver horarios ocupados.</p>
+              </div>
+              <button id="calendar-next" type="button" class="button button-ghost">›</button>
+            </div>
+            <div class="calendar-view-toggle">
+              <button id="view-month" type="button" class="button button-secondary is-active">Mes</button>
+              <button id="view-week" type="button" class="button button-secondary">Semana</button>
+              <button id="view-day" type="button" class="button button-secondary">Día</button>
+            </div>
+            <div id="calendar-grid" class="calendar-grid"></div>
+            <p id="calendar-summary" class="form-message">Cargando calendario...</p>
+            <div id="calendar-detail" class="calendar-detail"></div>
+          </div>
+
+          <div class="appointments-list-card field-full">
             <h3>Solicitudes recientes</h3>
             <div id="appointments-list">Cargando...</div>
           </div>

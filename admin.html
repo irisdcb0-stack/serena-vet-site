@@ -25,6 +25,16 @@
         </div>
 
         <div id="admin-root" style="display:none">
+          <div class="admin-toolbar">
+            <button id="admin-refresh" class="button button-ghost" type="button">Actualizar</button>
+            <select id="admin-status-filter" class="field-full">
+              <option value="all">Todos los estados</option>
+              <option value="requested">Solicitados</option>
+              <option value="confirmed">Confirmados</option>
+              <option value="cancelled">Cancelados</option>
+              <option value="completed">Completados</option>
+            </select>
+          </div>
           <div id="admin-list">Cargando...</div>
         </div>
       </div>
@@ -33,6 +43,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
   <script src="supabase-config.js"></script>
+  <script src="admin-config.js"></script>
   <script src="admin.js"></script>
 </body>
 </html>

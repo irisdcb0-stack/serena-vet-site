@@ -19,6 +19,12 @@ jobs:
         run: |
           if [ -f package.json ]; then npm ci; fi
 
+      - name: Generate Supabase config
+        run: node scripts/generate-supabase-config.js
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
       - name: Build (optional)
         run: |
           if [ -f package.json ] && npm run build; then echo "build complete"; fi

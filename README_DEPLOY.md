@@ -23,7 +23,7 @@ git push -u origin main
 2) Añadir Secrets en GitHub (Settings → Secrets and variables → Actions)
 - `NETLIFY_AUTH_TOKEN`: token personal de Netlify (User settings → Applications → Personal access tokens)
 - `NETLIFY_SITE_ID`: identificador del sitio en Netlify (si ya existe)
-- `SUPABASE_URL` y `SUPABASE_ANON_KEY` (si quieres que el sitio pueda leer/insertar)
+- `SUPABASE_URL` y `SUPABASE_ANON_KEY`: necesarios para que el frontend pueda conectarse con Supabase y mostrar el calendario y las citas.
 - `SUPABASE_SERVICE_ROLE_KEY` (solo si vas a ejecutar tareas administrativas en CI)
 - `SENDGRID_API_KEY` (si implementas Edge Function para emails)
 
@@ -44,6 +44,7 @@ Nota sobre RLS y administración
 4) Netlify
 - Conecta Netlify con tu repo (o usa el token y site id para que el GitHub Action despliegue).
 - El workflow ya subirá la carpeta raíz como `publish-dir`.
+- El proyecto incluye `netlify.toml` para publicar la carpeta raíz y servir `index.html`.
 
 5) Configuraciones adicionales
 - No subas `supabase-config.js` ni `emailjs-config.js` con claves; usa Secrets.
