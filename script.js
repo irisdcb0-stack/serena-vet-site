@@ -487,11 +487,15 @@ async function loadCalendar(currentDate = new Date()) {
   const summary = document.querySelector('#calendar-summary');
   const detail = document.querySelector('#calendar-detail');
   if (!summary || !grid) return;
-  if (!supabaseClient || !isSupabaseConfigured()) {
-    const message = 'No se puede cargar el calendario: configura Supabase primero.';
+
+  const showSupabaseWarning = !supabaseClient || !isSupabaseConfigured();
+  if (showSupabaseWarning) {
+    const message = 'Sin conexión a Supabase: este calendario muestra una vista de ejemplo mientras se configura.';
     summary.textContent = message;
-    grid.innerHTML = `<div class="calendar-error">${message}</div>`;
-    if (detail) detail.innerHTML = '';
+    renderCalendar([], currentDate);
+    if (detail) {
+      detail.innerHTML = `<div class="calendar-error">${message}</div>`;
+    }
     return;
   }
 
@@ -507,8 +511,9 @@ async function loadCalendar(currentDate = new Date()) {
   if (error) {
     const message = 'Error al cargar el calendario: revisa la conexión con Supabase.';
     summary.textContent = message;
+    renderCalendar([], currentDate);
     const grid = document.querySelector('#calendar-grid');
-    if (grid) grid.innerHTML = `<div class="calendar-error">${message}</div>`;
+    if (grid) grid.insertAdjacentHTML('afterbegin', `<div class="calendar-error">${message}</div>`);
     console.error(error);
     return;
   }
